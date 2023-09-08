@@ -22,4 +22,5 @@ Once the enviroment variables are set, valid HTTP requests can be made to the VT
 
 The tool should be ran using the VT_dataSubmitProcess.py as the main function.
 
-To run the tool, 
+To run the tool, it is recommended to download the python scripts and the target log file - assumed csv, into the same folder.
+Then sumply load the VT_dataSubmitProcess.py
