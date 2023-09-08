@@ -1,0 +1,12 @@
+// Defender KQL query for disabled tamper protection on client AV Defender for Endpoint
+
+let RecentDevices = DeviceInfo
+| where Timestamp >= ago(7d) and isnotempty(OSPlatform)
+| distinct DeviceId, MachineGroup;
+DeviceTvmSecureConfigurationAssessment
+| join kind=inner RecentDevices on DeviceId
+| where ConfigurationId == "scid-2003" and IsApplicable == 1
+| extend Status = iif(IsCompliant == 0, "Tamper Protection DISABLED", "Tamper Protection OK")
+| where IsCompliant==0
+| project DeviceId, DeviceName, OSPlatform, ConfigurationId, MachineGroup, Status
+// devices may be grouped for ease of management, here MachineGroup column is included to explore specific set of devices
