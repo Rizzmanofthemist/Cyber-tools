@@ -11,7 +11,7 @@ This is available through account signup (public API key) on https://www.virusto
 
 Once key has been obtained, it is recommended to set the key value in enviroment variable.
 On Windows OS, this can be done through CMD using the <set> command:
-    set APIkey='yourAPIKey'
+    set VTAPI='yourAPIKey'
 On Linux (Debian), the terminal command <env> can be used:
-    env APIkey
+    env VTAPI='yourAPIKey'
     
