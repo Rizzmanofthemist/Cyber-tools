@@ -18,4 +18,6 @@ On Linux (Debian), the terminal command <env> can be used:
 
     env VTAPI='yourAPIKey'
     
-Once 
+Once the enviroment variables are set, valid HTTP requests can be made to the VT API gateway.
+
+The tool should be ran using the VTAPI
