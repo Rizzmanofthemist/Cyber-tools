@@ -29,4 +29,5 @@ import VT_dataSubmitProcess.py
 
 The program would then execute, prompting for input file name and column of IoC data for submission analysis.
 
-
+The python code written here are for version 3.10.
+If some modules are missing in your enviroment, please check https://docs.python.org/3.10/py-modindex.html for module update/installation.
